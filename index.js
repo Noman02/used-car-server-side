@@ -7,3 +7,11 @@ require("dotenv").config();
 // middleware
 app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("used cars buy sell server in running.");
+});
+
+app.listen(port, () => {
+  console.log(`server is running on the port ${port}`);
+});

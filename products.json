@@ -1,0 +1,95 @@
+[
+  {
+    "category": "BMW",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAeq7wfxRmj_n6CbYXpJ7uPqxsJ0AiIWEONw&usqp=CAU",
+    "adds": "02 ads",
+    "products": [
+      {
+        "_id": "6380bad0ff895bd2b5ad6a20",
+        "name": "Fulton Mckay",
+        "picture": "http://placehold.it/32x32",
+        "original_price": 34,
+        "resale_price": 31,
+        "used_time": "$3,083.11",
+        "number": "+1 (828) 548-3671",
+        "description": "male",
+        "posted_time": 0,
+        "location": "681 Kane Street, Lutsen, West Virginia, 5720"
+      },
+      {
+        "_id": "6380bad0ff895bd2b5ad6a20",
+        "name": "Fulton Mckay",
+        "picture": "http://placehold.it/32x32",
+        "original_price": 34,
+        "resale_price": 31,
+        "used_time": "$3,083.11",
+        "number": "+1 (828) 548-3671",
+        "description": "male",
+        "posted_time": 0,
+        "location": "681 Kane Street, Lutsen, West Virginia, 5720"
+      }
+    ]
+  },
+  {
+    "category": "mercedes benz",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc2WKZ9MP2e5vcWvNceKcbX8yW8p9xUdPmvQ&usqp=CAU",
+    "adds": "02 ads",
+    "products": [
+      {
+        "_id": "6380bad0ff895bd2b5ad6a20",
+        "name": "Fulton Mckay",
+        "picture": "http://placehold.it/32x32",
+        "original_price": 34,
+        "resale_price": 31,
+        "used_time": "$3,083.11",
+        "number": "+1 (828) 548-3671",
+        "description": "male",
+        "posted_time": 0,
+        "location": "681 Kane Street, Lutsen, West Virginia, 5720"
+      },
+      {
+        "_id": "6380bad0ff895bd2b5ad6a20",
+        "name": "Fulton Mckay",
+        "picture": "http://placehold.it/32x32",
+        "original_price": 34,
+        "resale_price": 31,
+        "used_time": "$3,083.11",
+        "number": "+1 (828) 548-3671",
+        "description": "male",
+        "posted_time": 0,
+        "location": "681 Kane Street, Lutsen, West Virginia, 5720"
+      }
+    ]
+  },
+  {
+    "category": "Audi",
+    "picture": "https://www.ccarprice.com/products/Audi_Q7_Premium_Plus_45_TFSI_Quattro_2022.jpg",
+    "adds": "02 ads",
+    "products": [
+      {
+        "_id": "6380bad0ff895bd2b5ad6a20",
+        "name": "Fulton Mckay",
+        "picture": "http://placehold.it/32x32",
+        "original_price": 34,
+        "resale_price": 31,
+        "used_time": "$3,083.11",
+        "number": "+1 (828) 548-3671",
+        "description": "male",
+        "posted_time": 0,
+        "location": "681 Kane Street, Lutsen, West Virginia, 5720"
+      },
+      {
+        "_id": "6380bad0ff895bd2b5ad6a20",
+        "name": "Fulton Mckay",
+        "picture": "http://placehold.it/32x32",
+        "original_price": 34,
+        "resale_price": 31,
+        "used_time": "$3,083.11",
+        "number": "+1 (828) 548-3671",
+        "description": "male",
+        "posted_time": 0,
+        "location": "681 Kane Street, Lutsen, West Virginia, 5720"
+      }
+    ]
+  }
+]
