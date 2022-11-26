@@ -29,6 +29,14 @@ async function run() {
         .toArray();
       res.send(result);
     });
+    app.get("/category", async (req, res) => {
+      const query = {};
+      const result = await productsCollection
+        .find(query)
+        .project({ category: 1 })
+        .toArray();
+      res.send(result);
+    });
 
     app.get("/products/:id", async (req, res) => {
       const id = req.params.id;
