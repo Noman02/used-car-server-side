@@ -115,7 +115,6 @@ async function run() {
         return res.send({ accessToken: token });
       }
       res.status(403).send({ accessToken: "" });
-      console.log(user);
       res.send({ accessToken: "token" });
     });
 
@@ -126,9 +125,32 @@ async function run() {
     });
 
     app.get("/users", async (req, res) => {
-      const query = {};
-      const users = await usersCollection.find(query).toArray();
-      res.send(users);
+      let query = {};
+      if (req.query.role) {
+        query = {
+          role: req.query.role,
+        };
+      }
+
+      const role = await usersCollection.find(query).toArray();
+      res.send(role);
+    });
+
+    app.put("/users/admin/:id", verifyJWT, async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: ObjectId(id) };
+      const options = { upsert: true };
+      const updateDoc = {
+        $set: {
+          role: "admin",
+        },
+      };
+      const result = await usersCollection.updateOne(
+        filter,
+        updateDoc,
+        options
+      );
+      res.send(result);
     });
   } finally {
   }
