@@ -73,6 +73,17 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/orders", verifyJWT, async (req, res) => {
+      const email = req.query.email;
+      const decodedEmail = req.decoded.email;
+      if (email !== decodedEmail) {
+        return res.status(403).send({ message: "forbidden access" });
+      }
+      const query = { email: email };
+      const orders = await ordersCollection.find(query).toArray();
+      res.send(orders);
+    });
+
     app.post("/addproducts", async (req, res) => {
       const product = req.body;
       const result = await addProductsCollection.insertOne(product);
@@ -81,7 +92,7 @@ async function run() {
 
     app.get("/addproducts", async (req, res) => {
       const category = req.body.category;
-      console.log(category);
+
       // const decodedEmail = req.decoded.email;
 
       // if (email !== decodedEmail) {
