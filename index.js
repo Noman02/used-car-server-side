@@ -79,15 +79,18 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/addproducts", verifyJWT, async (req, res) => {
-      const email = req.query.email;
-      const decodedEmail = req.decoded.email;
-      if (email !== decodedEmail) {
-        return res.status(403).send({ message: "forbidden access!!" });
-      }
-      const query = {};
-      const result = await addProductsCollection.find(query).toArray();
-      res.send(result);
+    app.get("/addproducts", async (req, res) => {
+      const category = req.body.category;
+      console.log(category);
+      // const decodedEmail = req.decoded.email;
+
+      // if (email !== decodedEmail) {
+      //   return res.status(403).send({ message: "forbidden access" });
+      // const query = { email: email };
+      // }
+      const query = { category: category };
+      const products = await addProductsCollection.find(category).toArray();
+      res.send(products);
     });
 
     app.get("/jwt", async (req, res) => {
