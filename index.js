@@ -207,6 +207,13 @@ async function run() {
       const advertise = await addProductsCollection.find(query).toArray();
       res.send(advertise);
     });
+
+    app.delete("/addproducts/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await addProductsCollection.deleteOne(query);
+      res.send(result);
+    });
   } finally {
   }
 }
