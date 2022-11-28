@@ -184,6 +184,29 @@ async function run() {
       const result = await usersCollection.deleteOne(query);
       res.send(result);
     });
+
+    app.put("/addproducts/:id", verifyJWT, async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const upDoc = {
+        $set: {
+          role: "available",
+        },
+      };
+      const result = await addProductsCollection.updateOne(query, upDoc);
+      res.status(403).send(result);
+    });
+
+    app.get("/addproducts/advertise", async (req, res) => {
+      let query = {};
+      if (req.query.role) {
+        query = {
+          role: req.query.role,
+        };
+      }
+      const advertise = await addProductsCollection.find(query).toArray();
+      res.send(advertise);
+    });
   } finally {
   }
 }
