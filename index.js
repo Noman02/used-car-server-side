@@ -169,7 +169,20 @@ async function run() {
       const email = req.params.email;
       const query = { email };
       const user = await usersCollection.findOne(query);
-      res.send({ isSeller: user?.role === "seller" });
+      res.send({ isSeller: user?.role === "Seller" });
+    });
+    app.get("/users/buyer/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email };
+      const user = await usersCollection.findOne(query);
+      res.send({ isBuyer: user?.role === "Buyer" });
+    });
+
+    app.delete("/users/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await usersCollection.deleteOne(query);
+      res.send(result);
     });
   } finally {
   }
